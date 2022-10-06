@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("when","현재 시간은 9시가 아닙니다.")
             }
         }*/
-
+//
         var ageOfMichael = 19
 
         when (ageOfMichael){
