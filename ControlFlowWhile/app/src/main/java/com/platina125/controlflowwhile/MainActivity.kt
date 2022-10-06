@@ -19,9 +19,40 @@ class MainActivity : AppCompatActivity() {
 
         var game = 1
         var match = 6
-        do {
-            Log.d("while","${game}게임 이겼습니다. 우승까지${match-game}}")
+        /*do {
+            Log.d("while","${game}게임 이겼습니다. 우승까지 ${match-game}게임 남았습니다")
             game += 1
-        } while(game < match)
+        } while(game < match)*/
+
+        /*game = 6
+        while( 6 < match) {
+            Log.d("while","while 테스트 입니다")
+            game += 1
+        }*/
+
+        /*game = 6
+        do {
+            Log.d("while","do ~ while 테스트 입니다.")
+            game += 1
+        } while(game < match)*/
+
+       /* for(index in 1..10){
+            Log.d("while","break > 현재 index 는 $index 입니다")
+            if(index > 5) { // index가 5보다 크면 break 명령어로 현재 반복문을 벗어난다.
+                break      // 따라서 Log는 6까지만 출력된다.
+            }
+        }*/
+
+        /*for(except in 1..10){
+            if(except > 3 && except < 8){
+                continue
+            }
+            Log.d("while","continue > 현재 index 는 $except 입니다                            ")
+        }*/
+
+        var a = 1
+        while(a==1){
+            Log.d("while","조건을 만족하면 여기를 출력하세요!")
+        }
     }
 }
