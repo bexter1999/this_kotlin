@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val intent = Intent(this, SubActivity::class.java)
+        val intent = Intent(this, SubActivity::class.java) //문법
         intent.putExtra("from1","Hello Bundle")
         intent.putExtra("from2",2022)
         binding.btnStart.setOnClickListener{activityResult.launch(intent)}
