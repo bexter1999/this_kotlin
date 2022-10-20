@@ -9,28 +9,23 @@ import androidx.fragment.app.setFragmentResultListener
 import com.platina125.fragment_1_3.databinding.FragmentReceiverBinding
 
 class ReceiverFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
     lateinit var binding: FragmentReceiverBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentReceiverBinding.inflate(inflater,container,false)
+        binding = FragmentReceiverBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setFragmentResultListener("request"){key, bundle ->
-            bundle.getString("valueKey")?.let{
+        setFragmentResultListener("request") { key, bundle ->
+            bundle.getString("valueKey")?.let {
                 binding.textView.setText(it)
             }
         }
-
     }
 }

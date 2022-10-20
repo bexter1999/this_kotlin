@@ -25,11 +25,12 @@ class SenderFragment : Fragment() {
 
         binding.btnYes.setOnClickListener {
             val bundle = bundleOf("valueKey" to "Yes")
-            setFragmentResult("request",bundle)
+            setFragmentResult("request", bundle)
         }
+
         binding.btnNo.setOnClickListener {
-            val bundle = bundleOf("valueKey" to "no")
-            setFragmentResult("request",bundle)
+            val bundle = bundleOf("valueKey" to "No")
+            setFragmentResult("request", bundle)
         }
     }
 }
