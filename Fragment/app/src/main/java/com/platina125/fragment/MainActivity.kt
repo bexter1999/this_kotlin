@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun setFragment(){ //리스트 Fragment 생성
-
+        listFragment = ListFragment()
         //프래그먼트 생성시 값 전달하기 위한 변수설정 부분 3줄
         val bundle = Bundle()
         bundle.putString("key1","List Fragment")
