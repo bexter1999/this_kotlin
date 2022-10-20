@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project04">
         <activity
+            android:name=".Login1"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoard8"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoard7"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoard6"
+            android:exported="false" />
+        <activity
             android:name=".OnBoard5"
             android:exported="false" />
         <activity

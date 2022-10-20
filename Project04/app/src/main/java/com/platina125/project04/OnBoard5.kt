@@ -1,11 +1,17 @@
 package com.platina125.project04
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.platina125.project04.databinding.ActivityOnBoard5Binding
 
 class OnBoard5 : AppCompatActivity() {
+    val binding by lazy{ActivityOnBoard5Binding.inflate(layoutInflater)}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_on_board5)
+        setContentView(binding.root)
+
+        val intent = Intent(this, OnBoard6::class.java)
+        binding.OnBoardImg5.setOnClickListener {startActivity(intent)}
     }
 }
