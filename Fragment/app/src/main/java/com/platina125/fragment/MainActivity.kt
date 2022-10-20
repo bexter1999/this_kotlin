@@ -19,4 +19,19 @@ class MainActivity : AppCompatActivity() {
         // setFragment() 메서드 안에 다음과 같이 ListFragment를 생성
         transaction.commit()
     }
+
+    fun goDetail(){ //리스트 Fragment 생성
+        val detailFragment = DetailFragment()
+
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.frameLayout, detailFragment)
+        transaction.addToBackStack("detail")
+        transaction.commit()
+    }
+
+    fun goBack(){
+        onBackPressed()
+    }
+
+
 }
