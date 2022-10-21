@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Login1">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="360dp"
+        android:layout_height="640dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/login1" />
+
     <Button
         android:id="@+id/loginKakao"
         android:layout_width="wrap_content"
@@ -14,6 +26,9 @@
         android:paddingLeft="70dp"
         android:paddingRight="70dp"
         android:text="카카오톡으로 시작"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:backgroundTint="#FAE832"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +42,8 @@
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
         android:text="Facebook으로 시작"
+        android:textStyle="bold"
+        app:backgroundTint="#536BA4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +57,8 @@
         android:paddingLeft="80dp"
         android:paddingRight="80dp"
         android:text="NAVER로 시작"
+        android:textStyle="bold"
+        app:backgroundTint="#1BD047"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,21 +72,12 @@
         android:paddingLeft="75dp"
         android:paddingRight="75dp"
         android:text="Google로 시작"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginNaver" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/login1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project04">
         <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".Login2"
+            android:exported="false" />
+        <activity
             android:name=".Login1"
             android:exported="false" />
         <activity
