@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.platina125.projectmobile">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjectMobile">
+        <activity
+            android:name=".Home5"
+            android:exported="false" />
+        <activity
+            android:name=".Home4"
+            android:exported="false" />
+        <activity
+            android:name=".Home3"
+            android:exported="false"
+            android:label="@string/title_activity_home3"
+            android:theme="@style/Theme.ProjectMobile" />
+        <activity
+            android:name=".Home2"
+            android:exported="false" /> <!-- This element is required to enable Google Pay in your app. -->
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <activity
+            android:name=".Shopping"
+            android:exported="false" />
+        <activity
+            android:name=".AlarmDisplayModel"
+            android:exported="false" />
+        <activity
+            android:name=".AlarmReceiver"
+            android:exported="false" />
+        <activity
+            android:name=".Alarm"
+            android:exported="false" />
+        <activity
+            android:name=".Calendar"
+            android:exported="false" />
+        <activity
+            android:name=".Home1"
+            android:exported="false" />
+        <activity
+            android:name=".Login2"
+            android:exported="false" />
+        <activity
+            android:name=".Login1"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

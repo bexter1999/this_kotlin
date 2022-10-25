@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/HomeBtn"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+    <item android:title="Community"
+        android:id="@+id/CommunityBtn"
+        android:icon="@drawable/ic_baseline_library_books_24"
+        />
+    <item android:title="Map"
+        android:id="@+id/MapBtn"
+        android:icon="@drawable/ic_baseline_map_24"
+        />
+    <item android:title="Gallery"
+        android:id="@+id/GalleryBtn"
+        android:icon="@drawable/ic_baseline_photo_library_24"
+        />
+    <item android:title="MyPage"
+        android:id="@+id/MyPageBtn"
+        android:icon="@drawable/ic_baseline_settings_24"
+        />
+</menu>
