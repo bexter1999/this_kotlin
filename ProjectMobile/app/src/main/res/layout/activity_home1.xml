@@ -187,7 +187,7 @@
                     app:srcCompat="@drawable/hospital" />
 
                 <ImageButton
-                    android:id="@+id/imageButton4"
+                    android:id="@+id/ShoppingBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="270dp"
@@ -249,7 +249,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/ShoppingText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="270dp"
@@ -267,6 +267,17 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="68dp"
+                    android:layout_marginEnd="200dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/puppyprofile" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

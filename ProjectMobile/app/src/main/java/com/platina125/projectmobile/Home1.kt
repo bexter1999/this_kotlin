@@ -12,8 +12,13 @@ class Home1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val intent = Intent(this, Calendar::class.java)
-        binding.CalendarBtn.setOnClickListener{startActivity(intent)}
-        binding.CalendarText.setOnClickListener{startActivity(intent)}
+        val intentCalendar = Intent(this, Calendar::class.java)
+        binding.CalendarBtn.setOnClickListener{startActivity(intentCalendar)}
+        binding.CalendarText.setOnClickListener{startActivity(intentCalendar)}
+
+        val intentShopping = Intent(this, Shopping::class.java)
+        binding.ShoppingBtn.setOnClickListener{startActivity(intentShopping)}
+        binding.ShoppingText.setOnClickListener{startActivity(intentShopping)}
+
     }
 }
