@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectMobile">
         <activity
+            android:name=".Alarm"
+            android:exported="false" />
+        <activity
+            android:name=".Health"
+            android:exported="false" />
+        <activity
             android:name=".Home5"
             android:exported="false" />
         <activity
@@ -35,9 +41,6 @@
             android:exported="false" />
         <activity
             android:name=".AlarmReceiver"
-            android:exported="false" />
-        <activity
-            android:name=".Alarm"
             android:exported="false" />
         <activity
             android:name=".Calendar"
