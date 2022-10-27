@@ -1,6 +1,7 @@
 package com.platina125.projectmobile
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import java.io.FileInputStream
 import java.io.FileOutputStream
 
@@ -67,6 +68,17 @@ class Calendar : AppCompatActivity() {
             diaryContent.text = str
             diaryContent.visibility = View.VISIBLE
         }
+
+        val intentHome = Intent(this, Home1::class.java)
+        binding.HomeBtn.setOnClickListener{startActivity(intentHome)}
+        val intentCommunity = Intent(this, Home2::class.java)
+        binding.CommunityBtn.setOnClickListener{startActivity(intentCommunity)}
+        val intentMap = Intent(this, Home3::class.java)
+        binding.MapBtn.setOnClickListener{startActivity(intentMap)}
+        val intentGallery = Intent(this, Home4::class.java)
+        binding.GalleryBtn.setOnClickListener{startActivity(intentGallery)}
+        val intentMyPage = Intent(this, Home5::class.java)
+        binding.MyPageBtn.setOnClickListener{startActivity(intentMyPage)}
     }
 
     // 달력 내용 조회, 수정

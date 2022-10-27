@@ -8,8 +8,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -40,12 +39,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:layout_marginEnd="300dp"
+                    android:background="@android:color/transparent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/restaurant"
-                    android:background="@android:color/transparent"
-                    />
+                    app:srcCompat="@drawable/restaurant" />
 
                 <ImageButton
                     android:id="@+id/imageButton11"
@@ -53,10 +51,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="300dp"
                     android:layout_marginTop="50dp"
+                    android:background="@android:color/transparent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:background="@android:color/transparent"
                     app:srcCompat="@drawable/animalhospital" />
 
                 <ImageButton
@@ -65,10 +63,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:layout_marginEnd="150dp"
+                    android:background="@android:color/transparent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:background="@android:color/transparent"
                     app:srcCompat="@drawable/cafe" />
 
                 <ImageButton
@@ -77,10 +75,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
                     android:layout_marginTop="50dp"
+                    android:background="@android:color/transparent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:background="@android:color/transparent"
                     app:srcCompat="@drawable/hotel" />
 
                 <ImageButton
@@ -88,10 +86,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
+                    android:background="@android:color/transparent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:background="@android:color/transparent"
                     app:srcCompat="@drawable/petshop" />
 
                 <TextView
@@ -162,14 +160,85 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+    <LinearLayout
+        android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Header"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#AFA7A7"
+                app:layout_constraintBottom_toTopOf="@+id/MapBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/HomeBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/CommunityBtn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/footerhome" />
+
+            <ImageButton
+                android:id="@+id/MapBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/GalleryBtn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/CommunityBtn"
+                app:srcCompat="@drawable/footermap" />
+
+            <ImageButton
+                android:id="@+id/CommunityBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/MapBtn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/HomeBtn"
+                app:srcCompat="@drawable/footercommunity" />
+
+            <ImageButton
+                android:id="@+id/MyPageBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/GalleryBtn"
+                app:srcCompat="@drawable/footermypage" />
+
+            <ImageButton
+                android:id="@+id/GalleryBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/MyPageBtn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/MapBtn"
+                app:srcCompat="@drawable/footergallery" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

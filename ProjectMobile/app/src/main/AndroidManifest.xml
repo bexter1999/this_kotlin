@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectMobile">
         <activity
+            android:name=".NoteMemo"
+            android:exported="false" />
+        <activity
             android:name=".Alarm"
             android:exported="false" />
         <activity

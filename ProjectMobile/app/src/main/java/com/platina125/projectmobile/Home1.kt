@@ -20,5 +20,14 @@ class Home1 : AppCompatActivity() {
         binding.ShoppingBtn.setOnClickListener{startActivity(intentShopping)}
         binding.ShoppingText.setOnClickListener{startActivity(intentShopping)}
 
+
+        val intentCommunity = Intent(this, Home2::class.java)
+        binding.CommunityBtn.setOnClickListener{startActivity(intentCommunity)}
+        val intentMap = Intent(this, Home3::class.java)
+        binding.MapBtn.setOnClickListener{startActivity(intentMap)}
+        val intentGallery = Intent(this, Home4::class.java)
+        binding.GalleryBtn.setOnClickListener{startActivity(intentGallery)}
+        val intentMyPage = Intent(this, Home5::class.java)
+        binding.MyPageBtn.setOnClickListener{startActivity(intentMyPage)}
     }
 }
