@@ -5,7 +5,9 @@ plugins {
 
 android {
     compileSdk 33
-
+    buildFeatures{
+        viewBinding true
+    }
     defaultConfig {
         applicationId "com.platina125.sqlite"
         minSdk 18
