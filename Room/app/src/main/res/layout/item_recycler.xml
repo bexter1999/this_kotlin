@@ -24,7 +24,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="32dp"
-        android:ellipsize="endg
+        android:maxLines="2"
+        android:ellipsize="end"
         android:gravity="center_vertical"
         android:text="메모 내용 표시"
         android:textSize="24sp"
