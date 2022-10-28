@@ -3,10 +3,13 @@ package com.platina125.room
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.platina125.projectmobile.NoteMemo
 import com.platina125.projectmobile.databinding.ItemRecyclerBinding
 import java.text.SimpleDateFormat
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.Holder>() {
+    // 수정을 위해서 MainActivity 연결
+    var notememo: NoteMemo? = null
     var helper:RoomHelper? = null
     var listData = mutableListOf<RoomMemo>()
 
@@ -32,6 +35,11 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.Holder>() {
                 helper?.roomMemoDao()?.delete(mRoomMemo!!)
                 listData.remove(mRoomMemo)
                 notifyDataSetChanged()
+            }
+
+            // 수정 기능 추가
+            binding.textContent.setOnClickListener {
+                notememo?.setUpdate(mRoomMemo!!)
             }
         }
         fun setRoomMemo(RoomMemo:RoomMemo) {

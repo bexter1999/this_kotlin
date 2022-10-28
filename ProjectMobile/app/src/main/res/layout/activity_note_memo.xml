@@ -94,13 +94,24 @@
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:layout_marginStart="250dp"
         android:layout_marginBottom="70dp"
         android:text="저장"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:text="수정취소"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editMemo" />
 
     <LinearLayout
         android:id="@+id/footer"
