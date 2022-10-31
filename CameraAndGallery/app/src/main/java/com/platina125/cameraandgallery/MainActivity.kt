@@ -60,7 +60,9 @@ class MainActivity : AppCompatActivity() {
         binding.buttonCamera.setOnClickListener {
             cameraPermission.launch(Manifest.permission.CAMERA)
         }
-
+        binding.buttonGallery.setOnClickListener {
+            openGallery()
+        }
     }
 
     fun openCamera() {

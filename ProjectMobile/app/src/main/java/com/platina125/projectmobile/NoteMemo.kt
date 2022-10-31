@@ -21,6 +21,17 @@ class NoteMemo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        val intentHome = Intent(this, Home1::class.java)
+        binding.HomeBtn.setOnClickListener{startActivity(intentHome)}
+        val intentCommunity = Intent(this, Home2::class.java)
+        binding.CommunityBtn.setOnClickListener{startActivity(intentCommunity)}
+        val intentMap = Intent(this, Home3::class.java)
+        binding.MapBtn.setOnClickListener{startActivity(intentMap)}
+        val intentGallery = Intent(this, Home4::class.java)
+        binding.GalleryBtn.setOnClickListener{startActivity(intentGallery)}
+        val intentMyPage = Intent(this, Home5::class.java)
+        binding.MyPageBtn.setOnClickListener{startActivity(intentMyPage)}
+
         helper = Room.databaseBuilder(this, RoomHelper::class.java, "room_memo")
             .allowMainThreadQueries().build()
 
