@@ -54,7 +54,7 @@
                 app:srcCompat="@drawable/notice" />
 
             <View
-                android:id="@+id/view3"
+                android:id="@+id/viewHeader"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_weight="1"
@@ -197,6 +197,16 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.518"
                     app:layout_constraintStart_toStartOf="parent"></Button>
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:text="TextView"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
