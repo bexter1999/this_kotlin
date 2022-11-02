@@ -83,7 +83,7 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/TimerBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="280dp"
@@ -249,7 +249,7 @@
                     app:srcCompat="@drawable/calender" />
 
                 <ImageButton
-                    android:id="@+id/imageButton3"
+                    android:id="@+id/MemoBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="90dp"
@@ -273,7 +273,7 @@
                     app:srcCompat="@drawable/shopping" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/TimerText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="350dp"
@@ -311,7 +311,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/MemoText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="90dp"
@@ -429,7 +429,7 @@
                 <LinearLayout
                     android:id="@+id/linearLayout2"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="200dp"
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="25dp"
@@ -511,6 +511,18 @@
                         android:textStyle="bold" />
 
                 </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/MusicBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/play" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

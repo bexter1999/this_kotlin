@@ -16,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectMobile">
         <activity
+            android:name=".MusicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Music"
+            android:exported="false" />
+        <activity
             android:name=".Timer"
             android:exported="false" />
         <activity

@@ -1,11 +1,10 @@
-package com.platina125.contentresolver
+package com.platina125.projectmobile
 
 import android.media.MediaPlayer
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.platina125.contentresolver.databinding.ItemRecyclerBinding
+import com.platina125.projectmobile.databinding.MusicItemRecyclerBinding
 import java.text.SimpleDateFormat
 
 class MusicRecyclerAdapter: RecyclerView.Adapter<MusicRecyclerAdapter.Holder>() {
@@ -13,7 +12,7 @@ class MusicRecyclerAdapter: RecyclerView.Adapter<MusicRecyclerAdapter.Holder>() 
     var mediaPlayer:MediaPlayer? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val binding = ItemRecyclerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = MusicItemRecyclerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return Holder(binding)
     }
 
@@ -26,7 +25,7 @@ class MusicRecyclerAdapter: RecyclerView.Adapter<MusicRecyclerAdapter.Holder>() 
         holder.setMusic(music)
     }
 
-    inner class Holder(val binding: ItemRecyclerBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class Holder(val binding: MusicItemRecyclerBinding) : RecyclerView.ViewHolder(binding.root) {
         var currentMusic:Music? = null
 
         init {

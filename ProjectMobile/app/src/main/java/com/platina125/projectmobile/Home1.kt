@@ -28,14 +28,24 @@ class Home1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        val intentMusic = Intent(this, MusicActivity::class.java)
+        binding.MusicBtn.setOnClickListener{startActivity(intentMusic)}
+
+        val intentTimer = Intent(this, Timer::class.java)
+        binding.TimerBtn.setOnClickListener{startActivity(intentTimer)}
+        binding.TimerText.setOnClickListener{startActivity(intentTimer)}
+
         val intentCalendar = Intent(this, Calendar::class.java)
         binding.CalendarBtn.setOnClickListener{startActivity(intentCalendar)}
         binding.CalendarText.setOnClickListener{startActivity(intentCalendar)}
 
+        val intentMemo = Intent(this, NoteMemo::class.java)
+        binding.MemoBtn.setOnClickListener{startActivity(intentMemo)}
+        binding.MemoText.setOnClickListener{startActivity(intentMemo)}
+
         val intentShopping = Intent(this, Shopping::class.java)
         binding.ShoppingBtn.setOnClickListener{startActivity(intentShopping)}
         binding.ShoppingText.setOnClickListener{startActivity(intentShopping)}
-
 
         val intentCommunity = Intent(this, Home2::class.java)
         binding.CommunityBtn.setOnClickListener{startActivity(intentCommunity)}
