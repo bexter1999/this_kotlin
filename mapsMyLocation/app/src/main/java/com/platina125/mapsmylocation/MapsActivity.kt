@@ -1,8 +1,7 @@
-package com.platina125.projectmobile
+package com.platina125.mapsmylocation
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.location.Location
 import android.os.Bundle
 import android.os.Looper
@@ -19,13 +18,13 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.platina125.projectmobile.databinding.ActivityHome3Binding
+import com.platina125.mapsmylocation.databinding.ActivityMapsBinding
 
-class Home3 : AppCompatActivity(), OnMapReadyCallback {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     lateinit var locationPermission: ActivityResultLauncher<Array<String>>
 
     private lateinit var mMap: GoogleMap
-    private lateinit var binding: ActivityHome3Binding
+    private lateinit var binding: ActivityMapsBinding
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var locationCallback: LocationCallback
@@ -33,7 +32,7 @@ class Home3 : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityHome3Binding.inflate(layoutInflater)
+        binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
