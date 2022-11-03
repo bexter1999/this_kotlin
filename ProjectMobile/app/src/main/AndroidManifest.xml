@@ -5,8 +5,8 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -17,7 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectMobile">
-
+        <activity
+            android:name=".Home3"
+            android:exported="false"
+            android:label="@string/title_activity_home3"
+            android:theme="@style/Theme.ProjectMobile" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -33,11 +37,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCfNUn1EjzUwqD512jxvMULqA4qjhj4o7Y" />
 
-        <activity
-            android:name=".Home3"
-            android:exported="false"
-            android:label="@string/title_activity_home3"
-            android:theme="@style/Theme.ProjectMobile" />
         <activity
             android:name=".MusicActivity"
             android:exported="false" />

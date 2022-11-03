@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.os.Looper
 import android.util.Log
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -36,13 +37,19 @@ class Home3 : AppCompatActivity(), OnMapReadyCallback {
         binding = ActivityHome3Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val intentHome = Intent(this, Home1::class.java)
+        binding.HomeBtn.setOnClickListener{startActivity(intentHome)}
+        val intentCommunity = Intent(this, Home2::class.java)
+        binding.CommunityBtn.setOnClickListener{startActivity(intentCommunity)}
+        val intentGallery = Intent(this, Home4::class.java)
+        binding.GalleryBtn.setOnClickListener{startActivity(intentGallery)}
+        val intentMyPage = Intent(this, Home5::class.java)
+        binding.MyPageBtn.setOnClickListener{startActivity(intentMyPage)}
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.map) as SupportMapFragment
-        mapFragment.getMapAsync(this)
 
         locationPermission = registerForActivityResult(
-            ActivityResultContracts.RequestMultiplePermissions()) { result->
+            ActivityResultContracts.RequestMultiplePermissions()) { result ->
             if(result.all{it.value}){
                 startProcess()
             } else{Toast.makeText(this,"권한 승인이 필요합니다.", Toast.LENGTH_LONG).show()}
