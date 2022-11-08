@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectMobile">
         <activity
+            android:name=".Chat"
+            android:exported="false" />
+        <activity
             android:name=".Home3"
             android:exported="false"
             android:label="@string/title_activity_home3"

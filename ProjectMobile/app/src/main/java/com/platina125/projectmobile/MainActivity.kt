@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val intent = Intent(this, Home1::class.java)
+        val intent = Intent(this, Chat::class.java)
         binding.textView.setOnClickListener{startActivity(intent)}
     }
 }

@@ -1,4 +1,4 @@
-package com.platina125.firebasechat
+package com.platina125.projectmobile
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,9 +15,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import com.platina125.firebasechat.databinding.ActivityChatListBinding
-import com.platina125.firebasechat.model.Room
-
+import com.platina125.projectmobile.model.Room
+import com.platina125.projectmobile.databinding.ActivityChatListBinding
 class ChatListActivity : AppCompatActivity() {
     val binding by lazy { ActivityChatListBinding.inflate(layoutInflater)}
     val database = Firebase.database("https://this-is-android-with-kot-b4ff9-default-rtdb.asia-southeast1.firebasedatabase.app")
