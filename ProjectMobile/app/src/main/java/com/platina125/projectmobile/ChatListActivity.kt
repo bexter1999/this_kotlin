@@ -19,7 +19,7 @@ import com.platina125.projectmobile.model.Room
 import com.platina125.projectmobile.databinding.ActivityChatListBinding
 class ChatListActivity : AppCompatActivity() {
     val binding by lazy { ActivityChatListBinding.inflate(layoutInflater)}
-    val database = Firebase.database("https://this-is-android-with-kot-b4ff9-default-rtdb.asia-southeast1.firebasedatabase.app")
+    val database = Firebase.database("https://mobile-910c7-default-rtdb.asia-southeast1.firebasedatabase.app")
 
     val roomsRef  = database.getReference("rooms")
 
@@ -34,6 +34,18 @@ class ChatListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        val intentHome = Intent(this, Home1::class.java)
+        binding.HomeBtn.setOnClickListener{startActivity(intentHome)}
+        val intentCommunity = Intent(this, Home2::class.java)
+        binding.CommunityBtn.setOnClickListener{startActivity(intentCommunity)}
+        val intentMap = Intent(this, Home3::class.java)
+        binding.MapBtn.setOnClickListener{startActivity(intentMap)}
+        val intentGallery = Intent(this, Home4::class.java)
+        binding.GalleryBtn.setOnClickListener{startActivity(intentGallery)}
+        val intentMyPage = Intent(this, Home5::class.java)
+        binding.MyPageBtn.setOnClickListener{startActivity(intentMyPage)}
+
         // 인텐트로 넘어온 사용자 정보를 저장한다.
         userId = intent.getStringExtra("userId") ?: "none"
         userName = intent.getStringExtra("userName") ?: "Anonymous"

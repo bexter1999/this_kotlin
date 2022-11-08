@@ -1,5 +1,6 @@
 package com.platina125.projectmobile
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,7 +19,7 @@ import com.platina125.projectmobile.model.Message
 
 class ChatRoomActivity : AppCompatActivity() {
     val binding by lazy { ActivityChatRoomBinding.inflate(layoutInflater)}
-    val database = Firebase.database("https://this-is-android-with-kot-b4ff9-default-rtdb.asia-southeast1.firebasedatabase.app")
+    val database = Firebase.database("https://mobile-910c7-default-rtdb.asia-southeast1.firebasedatabase.app")
     lateinit var msgRef: DatabaseReference
 
     var roomId: String = ""
@@ -30,6 +31,18 @@ class ChatRoomActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        val intentHome = Intent(this, Home1::class.java)
+        binding.HomeBtn.setOnClickListener{startActivity(intentHome)}
+        val intentCommunity = Intent(this, Home2::class.java)
+        binding.CommunityBtn.setOnClickListener{startActivity(intentCommunity)}
+        val intentMap = Intent(this, Home3::class.java)
+        binding.MapBtn.setOnClickListener{startActivity(intentMap)}
+        val intentGallery = Intent(this, Home4::class.java)
+        binding.GalleryBtn.setOnClickListener{startActivity(intentGallery)}
+        val intentMyPage = Intent(this, Home5::class.java)
+        binding.MyPageBtn.setOnClickListener{startActivity(intentMyPage)}
+
         // 인텐트로 전달된 방 정보와 사용자 정보 꺼내기
         roomId = intent.getStringExtra("roomId") ?: "none"
         roomTitle = intent.getStringExtra("roomTitle") ?: "없음"

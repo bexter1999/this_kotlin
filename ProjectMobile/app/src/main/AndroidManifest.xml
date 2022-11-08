@@ -60,11 +60,7 @@
             android:exported="false" />
         <activity
             android:name=".Home2"
-            android:exported="false" /> <!-- This element is required to enable Google Pay in your app. -->
-        <meta-data
-            android:name="com.google.android.gms.wallet.api.enabled"
-            android:value="true" />
-
+            android:exported="false" />
         <activity
             android:name=".Shopping"
             android:exported="false" />
@@ -80,6 +76,12 @@
         <activity
             android:name=".Login1"
             android:exported="false" />
+        <activity
+            android:name=".ChatRoomActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".ChatListActivity"
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
