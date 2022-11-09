@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import com.bumptech.glide.Glide
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import com.platina125.firebasestorage.databinding.ActivityMainBinding
@@ -19,6 +20,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.btnUpload.setOnClickListener{
             permissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
+        }
+        binding.btnDownload.setOnClickListener{
+            downloadImage("images/temp_1667958633426.jpeg")
         }
     }
     val galleryLauncher = registerForActivityResult(ActivityResultContracts.GetContent()){ uri->
@@ -63,5 +67,14 @@ class MainActivity : AppCompatActivity() {
         val filename = "${path}/${userId}_${timeSuffix}.${ext}" // 완성
         // 예) 경로/사용자 ID_1231213123123.jpeg
         return filename
+    }
+
+    fun downloadImage(path: String){
+        // 스토리지 레퍼런스를 연결하고 이미지 uri를 가져옵니다.
+        storage.getReference(path).downloadUrl.addOnSuccessListener {uri ->
+             Glide.with(this).load(uri).into(binding.imageView)
+        }.addOnFailureListener{
+            Log.e("스토리지","다운로드 에러=>${it.message}")
+        }
     }
 }
