@@ -111,15 +111,15 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    android:id="@+id/button8"
+                    android:id="@+id/chatBtn"
                     android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="270dp"
-                    android:text="동네소식"
+                    android:text="채팅"
                     android:textSize="9sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#B8B4B4"
+                    app:backgroundTint="#FFDEDE"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

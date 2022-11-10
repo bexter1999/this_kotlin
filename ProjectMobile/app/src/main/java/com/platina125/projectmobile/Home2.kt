@@ -20,5 +20,8 @@ class Home2 : AppCompatActivity() {
         binding.GalleryBtn.setOnClickListener{startActivity(intentGallery)}
         val intentMyPage = Intent(this, Home5::class.java)
         binding.MyPageBtn.setOnClickListener{startActivity(intentMyPage)}
+
+        val intentChat = Intent(this, Chat::class.java)
+        binding.chatBtn.setOnClickListener{startActivity(intentChat)}
     }
 }
